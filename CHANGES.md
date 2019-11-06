@@ -1,6 +1,7 @@
 # 0.3.5
 
-Support rspec-rails 4.x. This is required for Rails 6
+* Avoid global configuration change (#86)
+* Support rspec-rails 4.x. This is required for Rails 6 (#88)
 
 # 0.3.4
 
