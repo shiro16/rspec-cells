@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency 'rspec-rails', '< 5.0'
+  s.add_runtime_dependency 'rspec-rails', '< 6.0'
   s.add_runtime_dependency "cells",       ">= 4.0.0", "< 6.0.0"
 
 
