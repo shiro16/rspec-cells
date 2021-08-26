@@ -1,3 +1,7 @@
+# 0.3.6
+
+* Support Ruby 3.
+
 # 0.3.5
 
 * Avoid global configuration change (#86)
