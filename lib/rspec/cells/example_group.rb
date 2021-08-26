@@ -9,10 +9,10 @@ module RSpec
 
       attr_reader :routes
 
-      def method_missing(method, *args, &block)
+      def method_missing(method, *args, **kwargs, &block)
         # Send the route helpers to the application router.
         if route_defined?(method)
-          controller.send(method, *args, &block)
+          controller.send(method, *args, **kwargs, &block)
         else
           super
         end
