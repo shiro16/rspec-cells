@@ -9,12 +9,19 @@ module RSpec
 
       attr_reader :routes
 
-      def method_missing(method, *args, **kwargs, &block)
-        # Send the route helpers to the application router.
-        if route_defined?(method)
+      if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('2.7.0')
+        def method_missing(method, *args, **kwargs, &block)
+          # Send the route helpers to the application router.
+          return super unless route_defined?(method)
+
           controller.send(method, *args, **kwargs, &block)
-        else
-          super
+        end
+      else
+        def method_missing(method, *args, &block)
+          # Send the route helpers to the application router.
+          return super unless route_defined?(method)
+
+          controller.send(method, *args, &block)
         end
       end
 
