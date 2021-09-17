@@ -1,3 +1,7 @@
+# 0.3.7
+
+* Fix method signature for ruby <= 2.6
+
 # 0.3.6
 
 * Support Ruby 3.
