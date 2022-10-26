@@ -12,6 +12,8 @@ Gem::Specification.new do |s|
   s.description = %q{Use render_cell in your specs.}
   s.license     = 'MIT'
 
+  s.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
+
   s.metadata = {
     "bug_tracker_uri"   => "https://github.com/trailblazer/rspec-cells/issues",
     "changelog_uri"     => "https://github.com/trailblazer/rspec-cells/blob/master/CHANGES.md",
