@@ -22,5 +22,6 @@ jobs:
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
+          rubygems: 3.2.3
       - name: RSpec
         run: bundle exec rake spec
