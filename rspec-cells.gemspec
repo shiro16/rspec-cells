@@ -31,6 +31,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'rspec-rails', '< 6.1'
   s.add_runtime_dependency "cells",       ">= 4.0.0", "< 6.0.0"
 
-
   s.add_development_dependency "capybara" # FIXME: please make test for Capybara run.
+  s.add_development_dependency "rake"
 end
